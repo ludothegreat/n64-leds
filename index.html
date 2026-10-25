@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d2021">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>N64 LEDs</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>N64 LEDs</h1>
+  <div id="status" class="status">Not connected</div>
+
+  <section id="connect-section">
+    <button id="connect" class="primary">Connect</button>
+    <p id="unsupported" class="note" hidden>
+      This browser can't use Bluetooth. Open this page in Chrome on Android.
+    </p>
+  </section>
+
+  <div id="controls" class="controls" aria-disabled="true">
+    <section>
+      <h2>Power</h2>
+      <button id="power" aria-pressed="true">On</button>
+    </section>
+
+    <section>
+      <h2>Color</h2>
+      <input id="color" type="color" value="#ff0000" aria-label="Pick a color">
+      <div class="swatches" id="swatches"></div>
+    </section>
+
+    <section>
+      <h2>Brightness</h2>
+      <label for="brightness"><span>Level</span><span id="brightness-val"></span></label>
+      <input id="brightness" type="range" min="1" max="128" value="40">
+    </section>
+
+    <section>
+      <h2>Effect</h2>
+      <div class="row seg" id="effects">
+        <button data-effect="0" aria-pressed="true">Solid</button>
+        <button data-effect="1" aria-pressed="false">Cycle</button>
+        <button data-effect="2" aria-pressed="false">Breathe</button>
+      </div>
+      <div class="speed">
+        <label for="speed"><span>Speed</span><span id="speed-val"></span></label>
+        <input id="speed" type="range" min="1" max="255" value="128">
+      </div>
+    </section>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
