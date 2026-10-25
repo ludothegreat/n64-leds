@@ -2,7 +2,7 @@
 const SERVICE_UUID = "1f350ed4-bf6b-48a5-9845-45f5d4d6cdbc";
 const STATE_UUID = "ae7d2ebf-fbee-4d2e-99fd-5bcf2b93bdfb";
 const PROTOCOL_VERSION = 1;
-const MAX_BRIGHTNESS = 128;
+const MAX_BRIGHTNESS = 255;
 
 // LED colors, not UI colors: these are what the lights will show.
 const SWATCHES = ["#ff0000", "#00ff00", "#0000ff", "#a000ff", "#ff5000", "#ffffff",

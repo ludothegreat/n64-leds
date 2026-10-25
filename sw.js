@@ -1,6 +1,6 @@
 // Cache the page so the home-screen app opens with no internet; it only needs
 // Bluetooth to reach the N64. Bump CACHE when any cached file changes.
-const CACHE = "n64-leds-v2";
+const CACHE = "n64-leds-v3";
 const FILES = ["./", "index.html", "app.js", "style.css", "manifest.json", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (event) => {
